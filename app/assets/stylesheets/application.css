@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
  header{
@@ -38,8 +39,39 @@
  }
  .form-container form > input[type="submit"]{
     padding: 8px;
-    background-color: rgba(0, 0, 255, .50);
-    border: 1px solid black;
+    background-color: rgba(0, 0, 255, .25);
+    border: none;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 255, .85);
+    cursor: pointer;
     border-radius: 4px;
+    color: black;
  }
 
+ .form-container form > input[type="submit"]:hover{
+   background-color: rgba(0, 0, 255, .50);
+   box-shadow: 0 0 10px 1px rgba(0, 0, 255, 1);  
+   color: white;
+}
+
+ .form-container form input[type="radio"]{
+   cursor: pointer;
+ }
+
+
+.form-booking{
+   display: flex;
+   background-color: rgba(0, 0, 255, .25);
+   padding: 32px;
+   border-radius: 8px;
+}
+
+.form-booking{
+   font-size: 18px;
+}
+
+.booking-header{
+   position: relative;
+   left: 11%;
+   margin: 12px 0;
+   text-decoration: underline;
+}
