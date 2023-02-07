@@ -1,31 +1,31 @@
 <div class="booking-container ">
     <div class="booking-container">
-      <h4>Your flight has been booked!</h4>
-        <div class="success__booking">
-        <h4><%= "#{@booking.flight.departure_airport.city} (#{@booking.flight.departure_airport.code}) to#{@booking.flight.arrival_airport.city} (#{@booking.flight.arrival_airport.code})" %></h4>
-        <p><%= "Departure: #{@booking.flight.departure_date_formatted}" %></p>
-        <p><%= "Duration: #{@booking.flight.duration.to_i} hours" %> </p>
-        <p><%= "Flight Number: #{@booking.flight.id}" %></p>
+        <h4>Your flight has been booked!</h4>
+            <div class="success__booking">
+            <h4><%= "#{@booking.flight.departure_airport.city} (#{@booking.flight.departure_airport.code}) to#{@booking.flight.arrival_airport.city} (#{@booking.flight.arrival_airport.code})" %></h4>
+            <p><%= "Departure: #{@booking.flight.departure_date_formatted}" %></p>
+            <p><%= "Duration: #{@booking.flight.duration.to_i} hours" %> </p>
+            <p><%= "Flight Number: #{@booking.flight.id}" %></p>
+            </div>
         </div>
-    </div>
 
-    <% @booking.passengers.each_with_index do |passenger, passenger_number| %>
-    <div class="booking-header">
-        <% if @booking.passengers.count > 1 %>
-          <h1><%= "Passenger #{passenger_number + 1} Information" %></h1>
-        <% else %>
-          <h3><%= "Passenger Information" %></h3>
+        <% @booking.passengers.each_with_index do |passenger, passenger_number| %>
+            <div class="booking-header">
+                <% if @booking.passengers.count > 1 %>
+                <h1><%= "Passenger #{passenger_number + 1} Information" %></h1>
+                <% else %>
+                <h3><%= "Passenger Information" %></h3>
+                <% end %>
+                <div class="information">
+                <span><strong><%= "Name:" %></strong>
+                <%= passenger.name %></span>
+                </div>
+
+                <div class="information">
+                <span><strong><%= "Email:" %></strong>
+                <%= passenger.email %></span>
+                </div>
+            </div>
         <% end %>
-        <div class="information">
-          <span><strong><%= "Name:" %></strong>
-          <%= passenger.name %></span>
-        </div>
-
-        <div class="information">
-          <span><strong><%= "Email:" %></strong>
-          <%= passenger.email %></span>
-        </div>
-      <% end %>
-       </div>
     </div>
 </div>
