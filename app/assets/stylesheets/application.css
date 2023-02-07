@@ -34,6 +34,18 @@ form label{
     padding: 32px 32px;
     background-color: rgba(0, 0, 255, .50);
  }
+
+
+.nav-header{
+   font-size: 32px;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   text-transform: uppercase;
+   color: #fefefe;
+}
+
+
  .form-container{
     width: 80%;
     height: 150px;
@@ -128,3 +140,9 @@ form label{
    text-decoration: none;
 }
 
+/* USER"S INFORMATION */
+
+
+.information, span{
+   margin: 8px 0;
+}
